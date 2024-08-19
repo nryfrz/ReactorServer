@@ -2,9 +2,12 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "TcpServer.h"
+#include "log.h"
 
 int main(int argc, char* argv[])
 {
+    Log::Instance()->init(0);
+    LOG_DEBUG("start server1");
 #if 0
     if (argc < 3)
     {
@@ -20,6 +23,7 @@ int main(int argc, char* argv[])
 #endif
     // 启动服务器
     TcpServer* server = new TcpServer(port, 4);
+    
     server->run();
 
     return 0;

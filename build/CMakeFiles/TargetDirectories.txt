@@ -1,0 +1,5 @@
+/home/nryfr/projects/reactorserver/ReactorServer/build/CMakeFiles/rebuild_cache.dir
+/home/nryfr/projects/reactorserver/ReactorServer/build/CMakeFiles/edit_cache.dir
+/home/nryfr/projects/reactorserver/ReactorServer/build/src/CMakeFiles/rebuild_cache.dir
+/home/nryfr/projects/reactorserver/ReactorServer/build/src/CMakeFiles/edit_cache.dir
+/home/nryfr/projects/reactorserver/ReactorServer/build/src/CMakeFiles/server.dir

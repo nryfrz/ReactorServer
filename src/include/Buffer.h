@@ -1,11 +1,14 @@
 #pragma once
 #include <string>
+#include <string.h>
+#include <iostream>
 using namespace std;
 
 class Buffer
 {
 public:
     Buffer(int size);
+    
     ~Buffer();
 
     // 扩容
@@ -34,11 +37,32 @@ public:
     {
         return m_data + m_readPos;
     }
+    //得到写指针的起始位置
+    inline char* BeginWrite() {
+        return m_data + m_writePos;
+    }
+    //移动写下标
+    void HasWritten(size_t len)
+    {
+        m_writePos += len;
+    }
     inline int readPosIncrease(int count)
     {
         m_readPos += count;
         return m_readPos;
     }
+
+    //取出所有数据并清空
+    void RetrieveAll();
+
+    //取出可读数据
+    std::string RetrieveAllToStr()
+    {
+        std::string str(data(), readableSize());
+        RetrieveAll();
+        return str;
+    }
+
 private:
     char* m_data;
     int m_capacity;

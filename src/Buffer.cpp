@@ -135,3 +135,7 @@ int Buffer::sendData(int socket)
     return 0;
 }
 
+void Buffer::RetrieveAll()
+{
+    bzero(m_data + m_readPos, readableSize());
+}
